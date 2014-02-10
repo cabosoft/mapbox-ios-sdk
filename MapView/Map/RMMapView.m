@@ -369,6 +369,22 @@
                backgroundImage:nil];
 }
 
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self)
+	{
+		[self performInitializationWithTilesource:[RMMapboxSource new]
+								 centerCoordinate:CLLocationCoordinate2DMake(kDefaultInitialLatitude, kDefaultInitialLongitude)
+										zoomLevel:kDefaultInitialZoomLevel
+									 maxZoomLevel:kDefaultMaximumZoomLevel
+									 minZoomLevel:kDefaultMinimumZoomLevel
+								  backgroundImage:nil];
+    }
+    return self;
+}
+
+
 - (id)initWithFrame:(CGRect)frame
       andTilesource:(id <RMTileSource>)newTilesource
    centerCoordinate:(CLLocationCoordinate2D)initialCenterCoordinate
@@ -426,9 +442,9 @@
 
 + (NSString *)pathForBundleResourceNamed:(NSString *)name ofType:(NSString *)extension
 {
-    NSAssert([[NSBundle mainBundle] pathForResource:@"Mapbox" ofType:@"bundle"], @"Resource bundle not found in application.");
-
     NSString *bundlePath      = [[NSBundle mainBundle] pathForResource:@"Mapbox" ofType:@"bundle"];
+    NSAssert(bundlePath.length > 0, @"Resource bundle not found in application.");
+
     NSBundle *resourcesBundle = [NSBundle bundleWithPath:bundlePath];
 
     return [resourcesBundle pathForResource:name ofType:extension];
@@ -2632,6 +2648,7 @@
     else if ( ! showLogoBug && _logoBug)
     {
         [_logoBug removeFromSuperview];
+		_logoBug = nil;
     }
 
     _showLogoBug = showLogoBug;
