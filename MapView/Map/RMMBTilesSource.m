@@ -45,7 +45,7 @@
     NSString *_uniqueTilecacheKey;
 }
 
-@synthesize cacheable = _cacheable, opaque = _opaque;
+@synthesize cacheable = _cacheable, opaque = _opaque, alpha = _alpha, blendMode = _blendMode;
 
 - (id)initWithTileSetResource:(NSString *)name
 {
@@ -80,6 +80,8 @@
 
     self.cacheable = NO;
     self.opaque = YES;
+    self.alpha = 1.0;
+    self.blendMode = kCGBlendModeNormal;
 
 	return self;
 }
