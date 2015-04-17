@@ -387,22 +387,6 @@
                backgroundImage:nil];
 }
 
-- (id)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self)
-	{
-		[self performInitializationWithTilesource:[RMMapboxSource new]
-								 centerCoordinate:CLLocationCoordinate2DMake(kDefaultInitialLatitude, kDefaultInitialLongitude)
-										zoomLevel:kDefaultInitialZoomLevel
-									 maxZoomLevel:kDefaultMaximumZoomLevel
-									 minZoomLevel:kDefaultMinimumZoomLevel
-								  backgroundImage:nil];
-    }
-    return self;
-}
-
-
 - (id)initWithFrame:(CGRect)frame
       andTilesource:(id <RMTileSource>)newTilesource
    centerCoordinate:(CLLocationCoordinate2D)initialCenterCoordinate
@@ -433,7 +417,14 @@
 
     _earlyTileSources = [NSMutableArray array];
 
-    return self;
+	[self performInitializationWithTilesource:[RMMapboxSource new]
+							 centerCoordinate:CLLocationCoordinate2DMake(kDefaultInitialLatitude, kDefaultInitialLongitude)
+									zoomLevel:kDefaultInitialZoomLevel
+								 maxZoomLevel:kDefaultMaximumZoomLevel
+								 minZoomLevel:kDefaultMinimumZoomLevel
+							  backgroundImage:nil];
+
+	return self;
 }
 
 - (void)setFrame:(CGRect)frame
