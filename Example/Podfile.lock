@@ -1,0 +1,30 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - GRMustache (7.3.2):
+    - JRSwizzle (~> 1.0)
+  - JRSwizzle (1.0)
+  - Mapbox-iOS-SDK (1.6.1-Cabo):
+    - FMDB (= 2.6.2)
+    - GRMustache (= 7.3.2)
+    - SMCalloutView (= 2.1.5)
+  - SMCalloutView (2.1.5)
+
+DEPENDENCIES:
+  - Mapbox-iOS-SDK (from `../`)
+
+EXTERNAL SOURCES:
+  Mapbox-iOS-SDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
+  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
+  Mapbox-iOS-SDK: a683eb1439950fa569f749ef2a112f3ab0b6792a
+  SMCalloutView: 5c0ee363dc8e7204b2fda17dfad38c93e9e23481
+
+PODFILE CHECKSUM: f54aa9de238016edc05139666b0b8fb9110e08e2
+
+COCOAPODS: 1.1.0.rc.2

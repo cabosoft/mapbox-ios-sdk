@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Mapbox-iOS-SDK_Example' do
+  pod 'Mapbox-iOS-SDK', :path => '../'
+
+  target 'Mapbox-iOS-SDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
