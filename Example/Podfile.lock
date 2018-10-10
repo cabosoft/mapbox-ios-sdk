@@ -14,6 +14,13 @@ PODS:
 DEPENDENCIES:
   - Mapbox-iOS-SDK (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
+    - GRMustache
+    - JRSwizzle
+    - SMCalloutView
+
 EXTERNAL SOURCES:
   Mapbox-iOS-SDK:
     :path: "../"
@@ -22,9 +29,9 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
-  Mapbox-iOS-SDK: a683eb1439950fa569f749ef2a112f3ab0b6792a
+  Mapbox-iOS-SDK: a9847031dc98e3ffc1ec74b37b697890fecac6db
   SMCalloutView: 5c0ee363dc8e7204b2fda17dfad38c93e9e23481
 
-PODFILE CHECKSUM: f54aa9de238016edc05139666b0b8fb9110e08e2
+PODFILE CHECKSUM: bf911be7ea1313558a97e2b4a15d7ea87fdf025e
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.6.0.beta.1

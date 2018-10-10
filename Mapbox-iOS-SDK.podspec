@@ -14,7 +14,7 @@ Pod::Spec.new do |m|
   m.source = { :git => 'https://github.com/cabosoft/mapbox-ios-sdk.git', :tag => m.version.to_s }
 
   m.platform              = :ios
-  m.ios.deployment_target = '8.0'
+  m.ios.deployment_target = '9.0'
   m.requires_arc          = true
 
   m.module_name = 'Mapbox_iOS_SDK'
